@@ -47,5 +47,6 @@ ADD magento/start.sh /root/start.sh
 
 RUN chmod +rwx /root/start.sh
 
+EXPOSE 80
 
 CMD ["/bin/sh", "/root/start.sh"]
