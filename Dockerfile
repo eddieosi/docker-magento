@@ -1,7 +1,7 @@
 FROM bradfeehan/magento
-
 # Based on bradfeehan/magento
 
+MAINTAINER eddiosi docker@humanbyte.de
 
 # Regenerate SSH host keys. This image does not contain any, so you
 # have to do that yourself. You may also comment out this instruction;
@@ -9,9 +9,9 @@ FROM bradfeehan/magento
 RUN /etc/my_init.d/00_regen_ssh_host_keys.sh
 
 
-
-
 # ...put your own build instructions here...
+
+# /...
 
 
 RUN apt-get update
