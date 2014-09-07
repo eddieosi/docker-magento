@@ -3,7 +3,6 @@
 
 #first parameter will be the port number for magento
 
-
 if [ $# -eq 0 ]
   then
     echo "No Parameter found"
@@ -22,7 +21,3 @@ else
     docker run --name $MEMCACHED_UUID -d -p 11211 sylvainlasnier/memcached
     docker run -p $1:80 --link $DATABASE_UUID:db --link $MEMCACHED_UUID:cache -td eddieosi/magento
 fi
-
-#docker run -td --name mariadb -e USER=user -e PASS=password  paintedfox/mariadb
-#docker run --name memcached -d -p 11211 sylvainlasnier/memcached
-#docker run -p $1:80 --link mariadb:db --link memcached:cache -td eddieosi/magento
